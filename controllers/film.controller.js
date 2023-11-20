@@ -11,7 +11,6 @@ module.exports.filmsController = {
     const {
       years,
       country,
-      genre,
       duration,
       director,
       cast,
@@ -23,13 +22,13 @@ module.exports.filmsController = {
       likes,
       dislikes,
       categoryId,
+      genreId,
     } = req.body;
 
     try {
       const film = await Film.create({
         years,
         country,
-        genre,
         duration,
         director,
         cast,
@@ -41,6 +40,7 @@ module.exports.filmsController = {
         likes,
         dislikes,
         categoryId,
+        genreId,
       });
       await res.json(film);
     } catch (e) {

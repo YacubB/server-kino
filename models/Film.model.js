@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const filmSchema = mongoose.Schema({
   years: Number,
   country: String,
-  genre: String,
   duration: String,
   director: String,
   cast: String,
@@ -23,6 +22,10 @@ const filmSchema = mongoose.Schema({
   categoryId: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: "Category",
+  },
+  genreId: {
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: "Genre",
   },
 });
 
