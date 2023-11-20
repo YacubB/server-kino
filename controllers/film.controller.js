@@ -39,7 +39,6 @@ module.exports.filmsController = {
         grade,
         likes,
         dislikes,
-        categoryId,
         genreId,
       });
       await res.json(film);
